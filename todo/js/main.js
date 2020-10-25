@@ -23,9 +23,10 @@ function getRowHtml(taskId) {
     let rowHtml = '';
     let taskDoneClass = '';
 
-    rowHtml += '<div id="row-' + taskId + '" class="row">';
+    rowHtml += '<div id="row-' + taskId + '" class="row ' + evenOdd(taskId) + '">';
     rowHtml += '<div class="tasktitle">' + taskList[taskId] + '</div>';
     rowHtml += '<div class="taskactions">';
+
 
     if (taskDoneList[taskId]) {
         taskDoneClass = 'done';
@@ -33,8 +34,8 @@ function getRowHtml(taskId) {
     else {
         taskDoneClass = '';
     }
-    rowHtml += '<div id="btndone-' + taskId + '" class="btnaction ' + taskDoneClass + '" onclick="done(' + taskId + ')">DONE</div>';
 
+    rowHtml += '<div id="btndone-' + taskId + '" class="btnaction ' + taskDoneClass + '" onclick="done(' + taskId + ')">DONE</div>';
     rowHtml += '<div id="btndelete-' + taskId + '" class="btnaction btndelete" onclick="del(' + taskId + ')">DELETE</div>';
     rowHtml += '</div>';
     rowHtml += '</div>';
@@ -51,4 +52,13 @@ function del(taskId) {
 function done(taskId) {
     taskDoneList[taskId] = !taskDoneList[taskId];
     update();
+}
+
+function evenOdd(taskId) {
+    if (taskId % 2) {
+        return 'even';
+    }
+    else {
+        return 'odd';
+    }
 }
