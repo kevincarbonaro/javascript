@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    top: 0;
+    font-family: verdana;
+}
+
+#header {
+    width: 100%;
+    height:80px;
+    background-color: silver;
+    margin-bottom: 10px;
+}
+
+#headertitle {
+    display: inline-block;
+    margin: 25px;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.row {
+    width: 100%;
+    height: 32px;
+    margin-bottom: 2px;
+    clear: both;
+}
+
+.even {
+    background-color: orange;
+}
+
+.odd {
+    background-color: orangered;
+}
+
+.tasktitle {
+    width: 100px;
+    margin-left: 8px;
+    margin-top: 8px;
+    font-weight: bold;
+    float: left;
+}
+
+.taskactions {
+    width: 170px;
+    margin-right: 10px;
+    float: right;
+}
+
+.btnaction {
+    width: 75px;
+    margin: 3px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: lightgrey;
+    float: left;
+    cursor: pointer;
+}
+
+.done {
+    background-color: green;
+}
+
+.btndelete {
+    background-color: red;
+}
+
+#taskadd {
+    margin-top: 10px;
+    clear: both;
+}
+
+#txtadd {
+    margin-left: 30px;
+    float: left;
+}
+
+#btnadd {
+    background-color: blue;
+    margin-top: 0px;
+    padding-top: 5px;
+    border: 0px;
+    font-size: 20px;
+    height: 30px;
+}
+
+#footer {
+    width: 100%;
+    height:30px;
+    background-color: silver;
+    margin-top: 55px;
+    clear: both;
+}
+
+#footertext {
+    display: inline-block;
+    margin: 6px;
+    font-size: 12px;
+}
